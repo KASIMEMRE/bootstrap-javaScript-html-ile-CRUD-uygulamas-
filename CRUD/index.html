@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Görev Listesi</title>
+    <link 
+        href="bootstrap/bootstrap.css" 
+        rel="stylesheet">
+        <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f5; 
+            color: #000; 
+            transition: background-color 0.4s, color 0.4s; 
+        }
+
+        body.dark-theme {
+            background-color: #303136; 
+            color: #fff; 
+        }
+
+       
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(145deg, #2a2b2f, #35363b);
+            box-shadow: 2px 2px 5px #bababa, -2px -2px 5px #ffffff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .theme-toggle i {
+            font-size: 20px;
+            color: #ff8c00; 
+            transition: color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .dark-theme .theme-toggle {
+            background: linear-gradient(145deg,#e0e0e0, #ffffff );
+            box-shadow: 2px 2px 5px #1e1f23, -2px -2px 5px #404248;
+        }
+
+        .dark-theme .theme-toggle i {
+            color: #f4f4f5; 
+        }
+        </style>
+</head>
+<body class="light-theme">
+    <!--Buton-->
+    <button class="theme-toggle bg-primary" id="themeToggle"></button>
+
+    <div class="container mt-5">
+        <!-- Başlık ve açıklama -->
+        <div class="text-center mb-4">
+            <h1 class="text-primary"><i class="fa fa-tasks"></i> Görev Yönetimi</h1>
+            <p class="text-secondary">Görevlerinizi kolayca ekleyin, yönetin ve takip edin!</p>
+        </div>
+
+        <!-- Görev ekleme alanı -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white text-center">
+                <h3>Yeni Görev Ekle</h3>
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <input type="text" id="taskInput" class="form-control" placeholder="Görev adı girin">
+                    <button id="addButton" class="btn btn-success"><i class="fa fa-plus"></i> Ekle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Görev listesi -->
+        <div class="card shadow-sm mt-4">
+            <div class="card-header bg-secondary text-white text-center">
+                <h3>Görev Listesi</h3>
+            </div>
+            <div class="card-body">
+                <ul id="taskList" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+    <script 
+        src="bootstrap/bootstrap.js">
+    </script>
+</body>
+</html>
