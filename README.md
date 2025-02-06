@@ -1,6 +1,6 @@
 # CRUD 🗺️
 
-<li>Bu proje HTML,BOOTSTRAP,JS ile oluşturulmuş veri ekleme,veri okuma,veri güncelleme ve veri silme işlemleri içerir.</li>
+<li>Bu proje HTML,BOOTSTRAP,JS ve LocalStorage kullanılarak oluşturulmuş veri ekleme,veri okuma,veri güncelleme ve veri silme işlemleri içerir.</li>
 <li>Proje kişilerin kendi kişisel amaçlarını oluşturarak kullannım kolaylığı sağlamkatadır.</li>
 
 
